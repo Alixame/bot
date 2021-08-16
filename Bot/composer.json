@@ -1,0 +1,11 @@
+{
+    "name" : "alixame/bot",
+    "autoload":{
+        "psr-4":{
+            "App\\":"app/"
+        }
+    },
+    "require": {
+        "telegram-bot/api":"^2.3"
+    }
+}

@@ -1,0 +1,10 @@
+
+CREATE DATABASAE banco_riosoft;
+
+CREATE TABLE tb_usuario_telegram(
+    nome varchar(255) Not Null,
+    sobrenome varchar(255) Not Null,
+    data_auth varchar(255) Not Null,
+    hashing varchar(255) Not Null,
+    id_chat int Not Null
+);
