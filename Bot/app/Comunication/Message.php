@@ -83,7 +83,7 @@ class Message {
 
         /**
         * VALIDA A MENSAGEM RECEBIDA
-            */
+        */
         switch (strtolower($message)) {
             case 'oi': case 'ola':
                 Alert::sendMessage($chatId,'Como posso ajuda-lo?');

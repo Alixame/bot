@@ -14,19 +14,20 @@ require __DIR__.'/vendor/autoload.php';
  */
 use \App\Comunication\Message;
 
-
+//INSTANCIANDO UM OBJETO DA CLASSE MESSAGE
 $obMessage = new Message();
 
-
-
+// ARMAZENANDO NA VARIAVEL RESULT O RETORNO DA FUNÇÃO DE CONSULTA A API
 $result = $obMessage->consomeAPI();
 
+// VERIFICA RESULTADO
 if(!$result->result == null){
 
+    // ARMAZENANDO NA VARIAVEL CONTMESSAGE O VALOR OBTIDO NA CONTA DO ARREY
     $countMensagem = count($result->result); 
-
+        
+        // ARMAZENANDO O PRIMEIRO VALOR DO ARRAY
         $firstMessage = array_key_first($result->result);
-
 
         $obMessage->setMessage($result->result[$firstMessage]->message->text);
         $obMessage->setUpdateId($result->result[$firstMessage]->update_id);

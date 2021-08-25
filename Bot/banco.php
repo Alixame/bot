@@ -19,7 +19,7 @@ $stmt=$conn->prepare("insert into tb_usuario_telegram(nome,sobrenome,data_auth,h
 if($stmt->execute())
 {
     Alert::sendMessage($id_chat,'Cadastrado com sucesso!');
-    header("Location: index.php?cadastred=success");
+    header("Location: index.php?cadastred=success&id=".$id_chat);
 }
 else
 {    
